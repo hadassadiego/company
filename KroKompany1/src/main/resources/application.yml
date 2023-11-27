@@ -1,0 +1,18 @@
+server:
+  port : 8080
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  profiles:
+    active: "default"
+cloud:
+  aws:
+    region: "eu-central-1"
+    sqs:
+      region:  "eu-central-1"
+      endpoint: "https://sqs.eu-central-1.amazonaws.com/066858493442/exercise-hadassa"
+      queueName: "exercise-hadassa"
+    credentials:
+      profile-name: "new_mupi_advance"
+
+
